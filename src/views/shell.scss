@@ -1,0 +1,30 @@
+@import "../theme/shared/variables";
+
+html,
+body,
+#host,
+.shell {
+  height: 100%;
+}
+
+.shell{
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "." ".";
+}
+
+header{
+  background: white;
+  padding: $spacing-small;
+  img{
+    height: 40px;
+  }
+}
+
+.fixed-width{
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}

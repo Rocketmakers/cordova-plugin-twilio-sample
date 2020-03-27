@@ -1,0 +1,39 @@
+variables:
+  DOCKER_HOST: "tcp://localhost:2375"
+  DOCKER_DRIVER: overlay
+
+stages:
+  - build-react
+  - build-cordova
+
+build react:
+  stage: build-react
+  image: node:12.13.1
+  tags:
+    - docker
+  script:
+    - npm i
+    - npm run build-dev
+  artifacts:
+    paths:
+      - cordova/www
+
+build android:
+  stage: build-cordova
+  tags:
+    - android-studio
+  script:
+    - cd cordova
+    - npm i
+    - npm run prestart
+    - npx cordova build android
+
+build ios:
+  stage: build-cordova
+  tags:
+    - xcode11
+  script:
+    - cd cordova
+    - npm i
+    - npm run prestart
+    - npx cordova build ios

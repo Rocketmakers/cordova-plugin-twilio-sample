@@ -1,0 +1,28 @@
+{
+  "icons": [
+    {
+      "name": "ldpi",
+      "size": 36
+    },
+    {
+      "name": "mdpi",
+      "size": 48
+    },
+    {
+      "name": "hdpi",
+      "size": 72
+    },
+    {
+      "name": "xhdpi",
+      "size": 96
+    },
+    {
+      "name": "xxhdpi",
+      "size": 144
+    },
+    {
+      "name": "xxxhdpi",
+      "size": 192
+    }
+  ]
+}

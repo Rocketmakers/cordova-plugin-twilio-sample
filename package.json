@@ -1,0 +1,47 @@
+{
+  "name": "boilerplate-app",
+  "version": "0.0.1",
+  "description": "Boilerplate Cordova Project",
+  "main": "lib/server.js",
+  "scripts": {
+    "build-dev": "webpack --config config/webpack.config.js --env.environment=dev",
+    "build-prod": "webpack -p --config config/webpack.config.js --env.environment=prod",
+    "start": "webpack-dev-server --config config/webpack.config.js --env.environment=dev",
+    "clean": "rimraf cordova/node_modules && rimraf cordova/platforms && rimraf cordova/plugins && rimraf cordova/config.xml"
+  },
+  "author": "Rocketmakers",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@rocketmakers/armstrong": "0.0.1-alpha.52",
+    "axios": "0.19.2",
+    "moment": "2.24.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-router-dom": "5.1.2"
+  },
+  "devDependencies": {
+    "@types/cordova": "0.0.34",
+    "@types/react": "16.9.25",
+    "@types/react-dom": "16.9.5",
+    "@types/react-router-dom": "5.1.3",
+    "autoprefixer": "9.7.5",
+    "copy-webpack-plugin": "5.1.1",
+    "css-loader": "3.4.2",
+    "file-loader": "6.0.0",
+    "html-webpack-plugin": "4.0.1",
+    "ignore-loader": "0.1.2",
+    "mini-css-extract-plugin": "0.9.0",
+    "node-sass": "4.13.1",
+    "postcss-loader": "3.0.0",
+    "rimraf": "3.0.2",
+    "sass-loader": "8.0.2",
+    "style-loader": "1.1.3",
+    "terser-webpack-plugin": "2.3.5",
+    "ts-loader": "6.2.2",
+    "typescript": "3.8.3",
+    "webpack": "4.42.1",
+    "webpack-cli": "3.3.11",
+    "webpack-dev-server": "3.10.3"
+  }
+}

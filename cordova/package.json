@@ -1,0 +1,42 @@
+{
+  "name": "com.rocketmakers.boilerplate",
+  "displayName": "Boilerplate",
+  "version": "0.0.1",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf platforms && rm -rf plugins",
+    "prestart": "node build/iconGenerator.js && node build/configWriter.js && npx cordova prepare",
+    "build-ios": "npx cordova build ios",
+    "build-android": "npx cordova build android"
+  },
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "cordova-android": "8.1.0",
+    "cordova-ios": "5.1.1",
+    "cordova-plugin-whitelist": "1.3.4",
+    "cordova-plugin-twilio": "file:libs/cordova-plugin-twilio"
+  },
+  "devDependencies": {
+    "cordova": "9.0.0",
+    "fs-extra": "9.0.0",
+    "ejs": "3.0.1",
+    "sharp": "0.25.2",
+    "rimraf": "3.0.2",
+    "moment": "^2.24.0"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-twilio": {
+        "INCOMING_CALL_APP_NAME": "cordova",
+        "DEBUG_TWILIO": true
+      }
+    },
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}

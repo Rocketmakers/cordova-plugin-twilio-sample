@@ -1,0 +1,11 @@
+.vscode
+node_modules
+config.xml
+platforms
+plugins
+jsconfig.json
+.env
+
+cordova/res/icons
+cordova/www
+cordova/libs
